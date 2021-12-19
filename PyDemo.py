@@ -9,3 +9,5 @@ for country in enumerate(MyList):
 
 print(len(MyList))
 
+
+print('1')
