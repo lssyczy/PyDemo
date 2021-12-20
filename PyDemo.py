@@ -1,13 +1,14 @@
-MyDic = {'Zhengyang': 100, 'Tianting':90, 'YouBao':80}
-MyList = ['China','Poland','Finland','France']
+# -*- coding: utf-8 -*-
+import re
 
-for key,value in MyDic.items():
-    print(key,value)
+def is_valid_email(addr):
+    if re.match(r'[0-9a-zA-Z\.]+\@[a-zA-Z\.]+\.com$',addr):
+        return True
+    else:
+        return False
 
-for country in enumerate(MyList):
-    print(country)
-
-print(len(MyList))
-
-
-print('123')
+assert is_valid_email('someone@gmail.com')
+assert is_valid_email('bill.gates@microsoft.com')
+assert not is_valid_email('bob#example.com')
+assert not is_valid_email('mr-bob@example.com')
+print('ok')
